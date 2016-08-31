@@ -29,6 +29,7 @@ h1 {
     color: #4E443C;
     font-size: 36px;
     font-weight: bold;
+    text-shadow: 2px 2px 4px #777;
 }
 
 h2, h2 a {
@@ -51,7 +52,18 @@ pre {
   text-shadow: none;
 }
 
-// div#jcarousel ul li {
-// 	width: 600px;
-// 	height: 400px;
-// }
+.mySlick {
+	background: silver;
+	margin-top: 20px;
+	text-align: center;
+	
+	// margin-left: 5px;
+}
+.mySlick button.slick-arrow::before{
+
+	color: maroon;
+}
+.mySlick div img {
+	width: 600px;
+	height: 400px;
+}
