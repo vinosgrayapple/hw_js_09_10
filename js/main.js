@@ -1,27 +1,48 @@
-// $(function() {
-//     $('.jcarousel').jcarousel({
-//         // Configuration goes here
-//     });
-// });
 $(function() {
 
-    $('.jcarousel').jcarousel({
-        wrap: 'circular'
-    })
-    .jcarouselAutoscroll({
-            interval: 3000,
-            target: '+=1',
-            autostart: true,
-        });
+  $("div.div__h1 h1").after().on("click", function() {
+    $(this).parent().next().toggle();
+  });
 
-    $('.jcarousel-pagination').jcarouselPagination({
-        item: function(page) {
-            return '<a href="#' + page + '">' + page + '</a>';
-        }
-        
-    });
+/*======**jcarousel**=======*/
+
+    $('.jcarousel').jcarousel();
+
+        $('.jcarousel-control-prev')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '-=1'
+            });
+
+        $('.jcarousel-control-next')
+            .on('jcarouselcontrol:active', function() {
+                $(this).removeClass('inactive');
+            })
+            .on('jcarouselcontrol:inactive', function() {
+                $(this).addClass('inactive');
+            })
+            .jcarouselControl({
+                target: '+=1'
+            });
+
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'a', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'a', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination({
+              'perPage': 1
+            });
 
 
+/*===========SLICK=============*/
 
   $('.mySlick').slick({
  dots: true,
@@ -30,5 +51,6 @@ $(function() {
   autoplay: true,
   autoplaySpeed: 2000,
   });
+
 
 });
