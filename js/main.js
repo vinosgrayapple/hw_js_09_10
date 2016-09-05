@@ -52,5 +52,18 @@ $(function() {
   autoplaySpeed: 2000,
   });
 
+/*=====PopSelect=====*/ 
+
+$("#element").popSelect({
+        showTitle: false,
+        maxAllowed: 4
+    });
+
 
 });
+
+/*=====PopSelect=====*/ 
+let selectInstance = new Select({
+  el: document.querySelector('select#teacher'),
+  className: 'select-theme-default'
+})

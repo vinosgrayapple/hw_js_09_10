@@ -54,8 +54,12 @@ pre {
   padding: 10px;
 }
 
-.jcarousel-wrapper, .mySlick, .cusel {
+.jcarousel-wrapper, .mySlick, .cusel, .PopSelect {
   display: none;
+}
+.PopSelect {
+  width: 100px;
+  height: 100px;
 }
 .mySlick {
   background: silver;
